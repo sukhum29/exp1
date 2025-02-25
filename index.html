@@ -55,66 +55,6 @@ int main() {
 }
     </code></pre>
 
-    <h3>C++ Program</h3>
-    <pre><code>
-#include &lt;iostream&gt;
-using namespace std;
-
-int main() {
-    char op;
-    double num1, num2;
-
-    cout << "Enter an operator (+, -, *, /): ";
-    cin >> op;
-    cout << "Enter two numbers: ";
-    cin >> num1 >> num2;
-
-    switch (op) {
-        case '+': cout << "Result: " << num1 + num2 << endl; break;
-        case '-': cout << "Result: " << num1 - num2 << endl; break;
-        case '*': cout << "Result: " << num1 * num2 << endl; break;
-        case '/': 
-            if (num2 != 0) cout << "Result: " << num1 / num2 << endl;
-            else cout << "Error! Division by zero." << endl;
-            break;
-        default: cout << "Invalid operator!" << endl;
-    }
-
-    return 0;
-}
-    </code></pre>
-
-    <h3>Java Program</h3>
-    <pre><code>
-import java.util.Scanner;
-
-public class Calculator {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter an operator (+, -, *, /): ");
-        char op = sc.next().charAt(0);
-        
-        System.out.print("Enter two numbers: ");
-        double num1 = sc.nextDouble(), num2 = sc.nextDouble();
-        
-        double result = 0;
-        switch (op) {
-            case '+': result = num1 + num2; break;
-            case '-': result = num1 - num2; break;
-            case '*': result = num1 * num2; break;
-            case '/': 
-                if (num2 != 0) result = num1 / num2;
-                else { System.out.println("Error! Division by zero."); return; }
-                break;
-            default: System.out.println("Invalid operator!"); return;
-        }
-
-        System.out.println("Result: " + result);
-        sc.close();
-    }
-}
-    </code></pre>
-
     <h2>Flex Program</h2>
     <pre><code>
 %{
