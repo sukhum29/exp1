@@ -151,26 +151,6 @@ int main()
     else //else reject 
         printf("Reject\n"); 
 }
-    <pre><code>
-%{
-#include &lt;stdio.h&gt;
-%}
-
-%%
-[0-9]+    { printf("NUMBER: %s\n", yytext); }
-[\+\-\*/] { printf("OPERATOR: %s\n", yytext); }
-.         { printf("OTHER: %s\n", yytext); }
-%%
-
-int main() {
-    yylex();
-    return 0;
-}
-
-int yywrap() {
-    return 1;
-}
     </code></pre>
-
 </body>
 </html>
